@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="{{url_for('static',filename="/css/tailwind.css")}}" type="text/css" rel="stylesheet">
+  <!-- <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet"> -->
+    <title>ASR IIITDwd</title>
+  </head>
+  <body>
+  <div class="campus-bg min-h-screen flex items-center justify-center bg-gray-50 sm:px-6 lg:px-8">
+    <div class="rounded-md shadow-sm py-8 px-16 bg-white">
+
+    <div>
+      <img class="mx-auto h-24 w-auto" src="https://iiitdwd.ac.in/img/logon.png">
+      <h2 class="mt-6 text-center text-3xl font-bold text-gray-900">
+        HINDI ASR
+      </h2>
+    </div>
+
+
+      
+      <!-- <div class="flex justify-center my-4">
+        <button class="flex justify-center mx-2 py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" id="start" type="button">Start</button>
+        <button class="flex justify-center mx-2 py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" id="stop" type="button">Stop</button>
+      </div> -->
+
+      <div class="flex justify-center my-4">
+      <form method='post' enctype='multipart/form-data'>
+      <input  type='file' name='file'>
+      <input  type='submit' value='Upload'>
+    </form>
+    </div>
+      <!--
+      <div class="flex justify-center">
+        <p id="status">Click on start.</p>
+      </div> 
+      -->
+
+      <!--
+
+      <div class="my-2">
+      <div>
+        <audio id="player" controls></audio>
+        </div><div class="flex justify-center">
+        <a class="font-medium text-indigo-600 hover:text-indigo-500" id="download">Download</a>
+        </div>
+      </div>
+
+      -->
+      
+      <div>
+     <!-- <div class="flex justify-center my-4">
+        <button class="flex justify-center mx-2 py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+          onclick="document.getElementById('output').innerHTML = 'this is the output msg'"
+        >
+          Show Text
+        </button>
+        </div> -->
+        <div class="text-2sm">
+          <p class="font-medium " id="output">{{output}}</p>
+        </div>
+      </div>
+      </div>
+    </div>
+
+  
+    <script type="text/javascript" src="{{url_for('static',filename='/js/index.js')}}"></script>
+  
+  </body>
+</html>
