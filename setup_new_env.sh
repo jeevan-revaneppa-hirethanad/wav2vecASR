@@ -32,9 +32,3 @@ make -j 16
 cd ..
 export KENLM_ROOT=$PWD
 cd ..
-
-git clone https://github.com/flashlight/flashlight.git
-sudo chmod 777 -R flashlight
-cd flashlight/bindings/python
-export USE_MKL=0
-python setup.py install
